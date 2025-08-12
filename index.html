@@ -7,6 +7,22 @@
     <meta name="description" content="Location de voitures au Bénin. Large gamme de véhicules, prix compétitifs, service premium. Réservez votre voiture en ligne !">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="media/images/logo/favicon.ico">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AutoLoc Bénin - Location de Voitures Premium">
+    <meta property="og:description" content="Location de voitures au Bénin. Large gamme de véhicules, prix compétitifs, service premium.">
+    <meta property="og:image" content="media/images/logo/autoloc-benin-og.jpg">
+    <meta property="og:url" content="https://autoloc-benin.bj">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AutoLoc Bénin - Location de Voitures Premium">
+    <meta name="twitter:description" content="Location de voitures au Bénin. Large gamme de véhicules, prix compétitifs, service premium.">
+    <meta name="twitter:image" content="media/images/logo/autoloc-benin-twitter.jpg">
 </head>
 <body>
     <!-- Header -->
@@ -28,6 +44,7 @@
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#vehicules">Véhicules</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#galerie">Galerie</a></li>
                 <li><a href="#tarifs">Tarifs</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -39,8 +56,21 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section avec Vidéo -->
     <section id="accueil" class="hero">
+        <!-- Vidéo d'arrière-plan -->
+        <div class="hero-video-container">
+            <video autoplay muted loop playsinline class="hero-video" poster="media/images/hero-poster.jpg">
+                <source src="media/videos/hero-video.mp4" type="video/mp4">
+                <source src="media/videos/hero-video.webm" type="video/webm">
+                <!-- Fallback pour navigateurs qui ne supportent pas la vidéo -->
+                <div class="hero-fallback">
+                    <img src="media/images/hero-fallback.jpg" alt="Voitures de luxe au Bénin - AutoLoc Bénin" class="hero-fallback-image">
+                </div>
+            </video>
+            <div class="hero-video-overlay"></div>
+        </div>
+        
         <div class="hero-content">
             <h1>Location de Voitures au Bénin</h1>
             <p>Découvrez notre flotte de véhicules modernes et confortables pour tous vos déplacements</p>
@@ -49,21 +79,25 @@
                 <button class="btn btn-secondary" onclick="scrollToSection('contact')">Nous contacter</button>
             </div>
         </div>
-        <div class="hero-image">
-            <div class="car-animation">
-                <svg width="300" height="200" viewBox="0 0 300 200">
-                    <rect x="50" y="120" width="200" height="40" rx="20" fill="#2563eb"/>
-                    <rect x="60" y="100" width="180" height="30" rx="15" fill="#3b82f6"/>
-                    <rect x="80" y="80" width="140" height="25" rx="12" fill="#60a5fa"/>
-                    <circle cx="80" cy="160" r="15" fill="#1e40af"/>
-                    <circle cx="220" cy="160" r="15" fill="#1e40af"/>
-                    <path d="M70 90 L230 90 L220 70 L80 70 Z" fill="#dbeafe"/>
-                </svg>
+        
+        <!-- Statistiques flottantes -->
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-number" data-target="500">0</div>
+                <div class="stat-label">Clients satisfaits</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="50">0</div>
+                <div class="stat-label">Véhicules disponibles</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Support client</div>
             </div>
         </div>
     </section>
 
-    <!-- Véhicules Section -->
+    <!-- Véhicules Section avec Images Réelles -->
     <section id="vehicules" class="vehicles">
         <div class="container">
             <h2>Nos Véhicules</h2>
@@ -72,14 +106,12 @@
             <div class="vehicle-grid">
                 <div class="vehicle-card">
                     <div class="vehicle-image">
-                        <svg width="200" height="150" viewBox="0 0 200 150">
-                            <rect x="30" y="80" width="140" height="30" rx="15" fill="#10b981"/>
-                            <rect x="40" y="60" width="120" height="25" rx="12" fill="#34d399"/>
-                            <rect x="60" y="40" width="80" height="25" rx="12" fill="#6ee7b7"/>
-                            <circle cx="60" cy="110" r="12" fill="#059669"/>
-                            <circle cx="140" cy="110" r="12" fill="#059669"/>
-                            <path d="M50 50 L150 50 L140 30 L60 30 Z" fill="#d1fae5"/>
-                        </svg>
+                        <img src="media/images/vehicles/citadine-economique.jpg" 
+                             alt="Citadine économique Toyota Yaris - Location de voiture au Bénin" 
+                             class="vehicle-img"
+                             data-src="media/images/vehicles/citadine-economique.jpg"
+                             loading="lazy">
+                        <div class="vehicle-badge">Économique</div>
                     </div>
                     <div class="vehicle-info">
                         <h3>Citadine Économique</h3>
@@ -100,14 +132,12 @@
 
                 <div class="vehicle-card">
                     <div class="vehicle-image">
-                        <svg width="200" height="150" viewBox="0 0 200 150">
-                            <rect x="25" y="85" width="150" height="35" rx="17" fill="#f59e0b"/>
-                            <rect x="35" y="65" width="130" height="25" rx="12" fill="#fbbf24"/>
-                            <rect x="55" y="45" width="90" height="25" rx="12" fill="#fcd34d"/>
-                            <circle cx="60" cy="120" r="13" fill="#d97706"/>
-                            <circle cx="140" cy="120" r="13" fill="#d97706"/>
-                            <path d="M45 55 L155 55 L145 35 L55 35 Z" fill="#fef3c7"/>
-                        </svg>
+                        <img src="media/images/vehicles/suv-familial.jpg" 
+                             alt="SUV familial Toyota RAV4 - Location de voiture au Bénin" 
+                             class="vehicle-img"
+                             data-src="media/images/vehicles/suv-familial.jpg"
+                             loading="lazy">
+                        <div class="vehicle-badge">Familial</div>
                     </div>
                     <div class="vehicle-info">
                         <h3>SUV Familial</h3>
@@ -128,14 +158,12 @@
 
                 <div class="vehicle-card">
                     <div class="vehicle-image">
-                        <svg width="200" height="150" viewBox="0 0 200 150">
-                            <rect x="20" y="90" width="160" height="40" rx="20" fill="#dc2626"/>
-                            <rect x="30" y="70" width="140" height="25" rx="12" fill="#ef4444"/>
-                            <rect x="50" y="50" width="100" height="25" rx="12" fill="#f87171"/>
-                            <circle cx="65" cy="130" r="15" fill="#b91c1c"/>
-                            <circle cx="135" cy="130" r="15" fill="#b91c1c"/>
-                            <path d="M40 60 L160 60 L150 40 L50 40 Z" fill="#fee2e2"/>
-                        </svg>
+                        <img src="media/images/vehicles/berline-premium.jpg" 
+                             alt="Berline premium Mercedes Classe C - Location de voiture au Bénin" 
+                             class="vehicle-img"
+                             data-src="media/images/vehicles/berline-premium.jpg"
+                             loading="lazy">
+                        <div class="vehicle-badge">Premium</div>
                     </div>
                     <div class="vehicle-info">
                         <h3>Berline Premium</h3>
@@ -157,7 +185,7 @@
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services Section avec Images -->
     <section id="services" class="services">
         <div class="container">
             <h2>Nos Services</h2>
@@ -165,55 +193,112 @@
             
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="60" height="60" viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="25" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
-                            <path d="M20 25 L40 25 L35 35 L25 35 Z" fill="#2563eb"/>
-                            <circle cx="25" cy="40" r="5" fill="#1e40af"/>
-                            <circle cx="35" cy="40" r="5" fill="#1e40af"/>
-                        </svg>
+                    <div class="service-image">
+                        <img src="media/images/services/livraison-domicile.jpg" 
+                             alt="Service de livraison à domicile - AutoLoc Bénin" 
+                             class="service-img"
+                             data-src="media/images/services/livraison-domicile.jpg"
+                             loading="lazy">
                     </div>
-                    <h3>Livraison à domicile</h3>
-                    <p>Nous livrons votre véhicule à l'adresse de votre choix dans Cotonou et environs</p>
+                    <div class="service-content">
+                        <h3>Livraison à domicile</h3>
+                        <p>Nous livrons votre véhicule à l'adresse de votre choix dans Cotonou et environs</p>
+                    </div>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="60" height="60" viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="25" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-                            <path d="M15 20 L45 20 L40 30 L20 30 Z" fill="#f59e0b"/>
-                            <rect x="20" y="35" width="20" height="8" rx="4" fill="#d97706"/>
-                            <rect x="25" y="40" width="10" height="3" rx="1" fill="#92400e"/>
-                        </svg>
+                    <div class="service-image">
+                        <img src="media/images/services/assurance-risques.jpg" 
+                             alt="Assurance tous risques incluse - AutoLoc Bénin" 
+                             class="service-img"
+                             data-src="media/images/services/assurance-risques.jpg"
+                             loading="lazy">
                     </div>
-                    <h3>Assurance tous risques</h3>
-                    <p>Voyagez en toute sérénité avec notre assurance complète incluse</p>
+                    <div class="service-content">
+                        <h3>Assurance tous risques</h3>
+                        <p>Voyagez en toute sérénité avec notre assurance complète incluse</p>
+                    </div>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="60" height="60" viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="25" fill="#dcfce7" stroke="#10b981" stroke-width="2"/>
-                            <path d="M20 25 L40 25 L30 40 Z" fill="#10b981"/>
-                            <circle cx="30" cy="20" r="3" fill="#059669"/>
-                            <rect x="25" y="35" width="10" height="8" rx="2" fill="#047857"/>
-                        </svg>
+                    <div class="service-image">
+                        <img src="media/images/services/support-24-7.jpg" 
+                             alt="Support client 24/7 - AutoLoc Bénin" 
+                             class="service-img"
+                             data-src="media/images/services/support-24-7.jpg"
+                             loading="lazy">
                     </div>
-                    <h3>Support 24/7</h3>
-                    <p>Notre équipe est disponible 24h/24 et 7j/7 pour vous assister</p>
+                    <div class="service-content">
+                        <h3>Support 24/7</h3>
+                        <p>Notre équipe est disponible 24h/24 et 7j/7 pour vous assister</p>
+                    </div>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="60" height="60" viewBox="0 0 60 60">
-                            <circle cx="30" cy="30" r="25" fill="#f3e8ff" stroke="#8b5cf6" stroke-width="2"/>
-                            <rect x="20" y="25" width="20" height="15" rx="2" fill="#8b5cf6"/>
-                            <rect x="25" y="30" width="10" height="5" rx="1" fill="#7c3aed"/>
-                            <circle cx="30" cy="40" r="2" fill="#6d28d9"/>
-                        </svg>
+                    <div class="service-image">
+                        <img src="media/images/services/reservation-en-ligne.jpg" 
+                             alt="Réservation en ligne sécurisée - AutoLoc Bénin" 
+                             class="service-img"
+                             data-src="media/images/services/reservation-en-ligne.jpg"
+                             loading="lazy">
                     </div>
-                    <h3>Réservation en ligne</h3>
-                    <p>Réservez votre véhicule en quelques clics sur notre plateforme sécurisée</p>
+                    <div class="service-content">
+                        <h3>Réservation en ligne</h3>
+                        <p>Réservez votre véhicule en quelques clics sur notre plateforme sécurisée</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galerie de Photos -->
+    <section id="galerie" class="gallery">
+        <div class="container">
+            <h2>Notre Flotte en Images</h2>
+            <p class="section-subtitle">Découvrez la qualité de nos véhicules</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="media/images/gallery/voiture-luxe-1.jpg" 
+                         alt="Voiture de luxe Mercedes - AutoLoc Bénin" 
+                         class="gallery-img"
+                         data-src="media/images/gallery/voiture-luxe-1.jpg"
+                         loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="media/images/gallery/suv-moderne-1.jpg" 
+                         alt="SUV moderne Toyota RAV4 - AutoLoc Bénin" 
+                         class="gallery-img"
+                         data-src="media/images/gallery/suv-moderne-1.jpg"
+                         loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="media/images/gallery/berline-elegante-1.jpg" 
+                         alt="Berline élégante BMW Série 3 - AutoLoc Bénin" 
+                         class="gallery-img"
+                         data-src="media/images/gallery/berline-elegante-1.jpg"
+                         loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="media/images/gallery/voiture-sportive-1.jpg" 
+                         alt="Voiture sportive Audi - AutoLoc Bénin" 
+                         class="gallery-img"
+                         data-src="media/images/gallery/voiture-sportive-1.jpg"
+                         loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="media/images/gallery/4x4-terrain-1.jpg" 
+                         alt="4x4 tout-terrain - AutoLoc Bénin" 
+                         class="gallery-img"
+                         data-src="media/images/gallery/4x4-terrain-1.jpg"
+                         loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="media/images/gallery/voiture-ville-1.jpg" 
+                         alt="Voiture de ville compacte - AutoLoc Bénin" 
+                         class="gallery-img"
+                         data-src="media/images/gallery/voiture-ville-1.jpg"
+                         loading="lazy">
                 </div>
             </div>
         </div>
@@ -386,6 +471,7 @@
                         <li><a href="#accueil">Accueil</a></li>
                         <li><a href="#vehicules">Véhicules</a></li>
                         <li><a href="#services">Services</a></li>
+                        <li><a href="#galerie">Galerie</a></li>
                         <li><a href="#tarifs">Tarifs</a></li>
                     </ul>
                 </div>
@@ -403,17 +489,17 @@
                 <div class="footer-section">
                     <h4>Suivez-nous</h4>
                     <div class="social-links">
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="Facebook">
                             <svg width="20" height="20" viewBox="0 0 20 20">
                                 <path d="M10 0 C4.48 0 0 4.48 0 10 C0 15.52 4.48 20 10 20 C15.52 20 20 15.52 20 10 C20 4.48 15.52 0 10 0 Z M7 15 L3 10 L4.41 8.59 L7 11.17 L15.59 2.58 L17 4 L7 15 Z" fill="#2563eb"/>
                             </svg>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="WhatsApp">
                             <svg width="20" height="20" viewBox="0 0 20 20">
                                 <path d="M10 0 C4.48 0 0 4.48 0 10 C0 15.52 4.48 20 10 20 C15.52 20 20 15.52 20 10 C20 4.48 15.52 0 10 0 Z M7 15 L3 10 L4.41 8.59 L7 11.17 L15.59 2.58 L17 4 L7 15 Z" fill="#10b981"/>
                             </svg>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" aria-label="Instagram">
                             <svg width="20" height="20" viewBox="0 0 20 20">
                                 <path d="M10 0 C4.48 0 0 4.48 0 10 C0 15.52 4.48 20 10 20 C15.52 20 20 15.52 20 10 C20 4.48 15.52 0 10 0 Z M7 15 L3 10 L4.41 8.58 L7 11.17 L15.59 2.58 L17 4 L7 15 Z" fill="#f59e0b"/>
                             </svg>
@@ -428,6 +514,8 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="config.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
