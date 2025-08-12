@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🖼️ Démonstration des Images Réelles - AutoLoc Bénin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8fafc;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section h2 {
+            color: #1e293b;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 10px;
+        }
+        
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .image-card {
+            background: #f8fafc;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .image-card:hover {
+            transform: translateY(-5px);
+            border-color: #2563eb;
+        }
+        
+        .image-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .image-card h3 {
+            color: #1e293b;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .image-card p {
+            color: #64748b;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .image-info {
+            background: #e2e8f0;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #475569;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .usage-example {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 4px solid #2563eb;
+        }
+        
+        .usage-example h4 {
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+        
+        .code {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+        
+        .next-steps {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        .next-steps h2 {
+            margin-bottom: 20px;
+        }
+        
+        .steps-list {
+            list-style: none;
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .steps-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .steps-list li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🖼️ Images Réelles AutoLoc Bénin</h1>
+            <p>Démonstration complète de toutes les images téléchargées et prêtes à l'emploi</p>
+        </div>
+
+        <!-- Statistiques -->
+        <div class="section">
+            <h2>📊 Statistiques des Images</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">31</div>
+                    <div class="stat-label">Images Téléchargées</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Catégories</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Prêtes à l'Emploi</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">HD</div>
+                    <div class="stat-label">Qualité Optimale</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Véhicules -->
+        <div class="section">
+            <h2>🚗 Images des Véhicules (800x600px)</h2>
+            <p>Images haute qualité de votre flotte de véhicules</p>
+            <div class="images-grid">
+                <div class="image-card">
+                    <img src="media/images/vehicles/citadine-economique.jpg" alt="Citadine Économique">
+                    <h3>Citadine Économique</h3>
+                    <p>Voiture compacte idéale pour la ville</p>
+                    <div class="image-info">
+                        📁 media/images/vehicles/citadine-economique.jpg<br>
+                        📏 800x600px | 🗜️ 87KB
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="media/images/vehicles/suv-familial.jpg" alt="SUV Familial">
+                    <h3>SUV Familial</h3>
+                    <p>Véhicule spacieux pour toute la famille</p>
+                    <div class="image-info">
+                        📁 media/images/vehicles/suv-familial.jpg<br>
+                        📏 800x600px | 🗜️ 77KB
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="media/images/vehicles/berline-premium.jpg" alt="Berline Premium">
+                    <h3>Berline Premium</h3>
+                    <p>Voiture de luxe pour vos déplacements professionnels</p>
+                    <div class="image-info">
+                        📁 media/images/vehicles/berline-premium.jpg<br>
+                        📏 800x600px | 🗜️ 87KB
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div class="section">
+            <h2>🎯 Images des Services (600x400px)</h2>
+            <p>Images représentatives de vos prestations</p>
+            <div class="images-grid">
+                <div class="image-card">
+                    <img src="media/images/services/livraison-domicile.jpg" alt="Livraison à Domicile">
+                    <h3>Livraison à Domicile</h3>
+                    <p>Service de livraison à votre porte</p>
+                    <div class="image-info">
+                        📁 media/images/services/livraison-domicile.jpg<br>
+                        📏 600x400px | 🗜️ 28KB
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="media/images/services/assurance-risques.jpg" alt="Assurance Tous Risques">
+                    <h3>Assurance Tous Risques</h3>
+                    <p>Protection complète incluse</p>
+                    <div class="image-info">
+                        📁 media/images/services/assurance-risques.jpg<br>
+                        📏 600x400px | 🗜️ 35KB
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="media/images/services/support-24-7.jpg" alt="Support 24/7">
+                    <h3>Support 24/7</h3>
+                    <p>Assistance disponible jour et nuit</p>
+                    <div class="image-info">
+                        📁 media/images/services/support-24-7.jpg<br>
+                        📏 600x400px | 🗜️ 35KB
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="media/images/services/reservation-en-ligne.jpg" alt="Réservation en Ligne">
+                    <h3>Réservation en Ligne</h3>
+                    <p>Réservez facilement sur notre site</p>
+                    <div class="image-info">
+                        📁 media/images/services/reservation-en-ligne.jpg<br>
+                        📏 600x400px | 🗜️ 35KB
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galerie -->
+        <div class="section">
+            <h2>🖼️ Images de la Galerie (600x400px)</h2>
+            <p>Collection variée de votre flotte</p>
+            <div class="images-grid">
+                <div class="image-card">
+                    <img src="media/images/gallery/voiture-luxe-1.jpg" alt="Voiture de Luxe">
+                    <h3>Voiture de Luxe</h3>
+                    <p>Véhicule haut de gamme</p>
+                    <div class="image-info">
+                        📁 media/images/gallery/voiture-luxe-1.jpg<br>
+                        📏 600x400px | 🗜️ 69KB
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="media/images/gallery/suv-moderne-1.jpg" alt="SUV Moderne">
+                    <h3>SUV Moderne</h3>
+                    <p>SUV contemporain et élégant</p>
+                    <div class="image-info">
+                        📁 media/images/gallery/suv-moderne-1.jpg<br>
+                        📏 600x400px | 🗜️ 43KB
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="media/images/gallery/berline-elegante-1.jpg" alt="Berline Élégante">
+                    <h3>Berline Élégante</h3>
+                    <p>Berline sophistiquée</p>
+                    <div class="image-info">
+                        📁 media/images/gallery/berline-elegante-1.jpg<br>
+                        📏 600x400px | 🗜️ 49KB
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="media/images/gallery/voiture-sportive-1.jpg" alt="Voiture Sportive">
+                    <h3>Voiture Sportive</h3>
+                    <p>Véhicule dynamique et performant</p>
+                    <div class="image-info">
+                        📁 media/images/gallery/voiture-sportive-1.jpg<br>
+                        📏 600x400px | 🗜️ 70KB
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="media/images/gallery/4x4-terrain-1.jpg" alt="4x4 Tout Terrain">
+                    <h3>4x4 Tout Terrain</h3>
+                    <p>Véhicule robuste pour tous terrains</p>
+                    <div class="image-info">
+                        📁 media/images/gallery/4x4-terrain-1.jpg<br>
+                        📏 600x400px | 🗜️ 43KB
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="media/images/gallery/voiture-ville-1.jpg" alt="Voiture de Ville">
+                    <h3>Voiture de Ville</h3>
+                    <p>Citadine parfaite pour la ville</p>
+                    <div class="image-info">
+                        📁 media/images/gallery/voiture-ville-1.jpg<br>
+                        📏 600x400px | 🗜️ 69KB
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Accueil -->
+        <div class="section">
+            <h2>🏠 Images d'Accueil (1920x1080px)</h2>
+            <p>Images haute résolution pour votre page d'accueil</p>
+            <div class="images-grid">
+                <div class="image-card">
+                    <img src="media/images/hero/hero-fallback.jpg" alt="Image de Fallback">
+                    <h3>Image de Fallback</h3>
+                    <p>Image de secours pour la vidéo d'accueil</p>
+                    <div class="image-info">
+                        📁 media/images/hero/hero-fallback.jpg<br>
+                        📏 1920x1080px | 🗜️ Haute qualité
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="media/images/hero/hero-poster.jpg" alt="Poster Vidéo">
+                    <h3>Poster Vidéo</h3>
+                    <p>Aperçu de la vidéo d'accueil</p>
+                    <div class="image-info">
+                        📁 media/images/hero/hero-poster.jpg<br>
+                        📏 1920x1080px | 🗜️ Haute qualité
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Témoignages -->
+        <div class="section">
+            <h2>👥 Photos des Clients (200x200px)</h2>
+            <p>Photos de vos clients satisfaits</p>
+            <div class="images-grid">
+                <div class="image-card">
+                    <img src="media/images/testimonials/client-1.jpg" alt="Client 1">
+                    <h3>Marie Kossi</h3>
+                    <p>Entrepreneuse, Cotonou</p>
+                    <div class="image-info">
+                        📁 media/images/testimonials/client-1.jpg<br>
+                        📏 200x200px | 🗜️ Optimisé
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="media/images/testimonials/client-2.jpg" alt="Client 2">
+                    <h3>Kossi Agbeko</h3>
+                    <p>Directeur Commercial, Porto-Novo</p>
+                    <div class="image-info">
+                        📁 media/images/testimonials/client-2.jpg<br>
+                        📏 200x200px | 🗜️ Optimisé
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="media/images/testimonials/client-3.jpg" alt="Client 3">
+                    <h3>Fatou Diallo</h3>
+                    <p>Famille, Abomey</p>
+                    <div class="image-info">
+                        📁 media/images/testimonials/client-3.jpg<br>
+                        📏 200x200px | 🗜️ Optimisé
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Équipe -->
+        <div class="section">
+            <h2>👨‍💼 Photos de l'Équipe (300x300px)</h2>
+            <p>Photos professionnelles de votre personnel</p>
+            <div class="images-grid">
+                <div class="image-card">
+                    <img src="media/images/team/directeur.jpg" alt="Directeur Général">
+                    <h3>Kossi Mensah</h3>
+                    <p>Directeur Général</p>
+                    <div class="image-info">
+                        📁 media/images/team/directeur.jpg<br>
+                        📏 300x300px | 🗜️ Professionnel
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="media/images/team/manager.jpg" alt="Manager Opérations">
+                    <h3>Fatou Traoré</h3>
+                    <p>Manager Opérations</p>
+                    <div class="image-info">
+                        📁 media/images/team/manager.jpg<br>
+                        📏 300x300px | 🗜️ Professionnel
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="media/images/team/technicien.jpg" alt="Chef Mécanicien">
+                    <h3>Moussa Koné</h3>
+                    <p>Chef Mécanicien</p>
+                    <div class="image-info">
+                        📁 media/images/team/technicien.jpg<br>
+                        📏 300x300px | 🗜️ Professionnel
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Utilisation -->
+        <div class="section">
+            <h2>💻 Comment Utiliser ces Images</h2>
+            <p>Exemples d'intégration dans votre code HTML</p>
+            
+            <div class="usage-example">
+                <h4>🚗 Image de Véhicule :</h4>
+                <div class="code">
+&lt;img src="media/images/vehicles/citadine-economique.jpg" 
+     alt="Citadine Économique - AutoLoc Bénin" 
+     class="vehicle-image"&gt;
+                </div>
+            </div>
+            
+            <div class="usage-example">
+                <h4>🎯 Image de Service :</h4>
+                <div class="code">
+&lt;img src="media/images/services/livraison-domicile.jpg" 
+     alt="Livraison à Domicile - AutoLoc Bénin" 
+     class="service-image"&gt;
+                </div>
+            </div>
+            
+            <div class="usage-example">
+                <h4>👥 Photo Client :</h4>
+                <div class="code">
+&lt;img src="media/images/testimonials/client-1.jpg" 
+     alt="Marie Kossi - Client Satisfait" 
+     class="client-avatar"&gt;
+                </div>
+            </div>
+            
+            <div class="usage-example">
+                <h4>🏠 Image d'Accueil :</h4>
+                <div class="code">
+&lt;img src="media/images/hero/hero-fallback.jpg" 
+     alt="Voitures de Luxe au Bénin" 
+     class="hero-image"&gt;
+                </div>
+            </div>
+        </div>
+
+        <!-- Prochaines Étapes -->
+        <div class="next-steps">
+            <h2>🚀 Prochaines Étapes</h2>
+            <ul class="steps-list">
+                <li>✅ <strong>Images téléchargées</strong> - Toutes les images sont prêtes</li>
+                <li>🔧 <strong>Intégrer dans votre site</strong> - Utilisez les chemins fournis</li>
+                <li>🎬 <strong>Créer la vidéo d'accueil</strong> - Suivez le guide vidéo</li>
+                <li>📱 <strong>Tester sur tous appareils</strong> - Vérifiez le responsive</li>
+                <li>🚀 <strong>Déployer sur Hostinger</strong> - Lancez votre site</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Script de démonstration -->
+    <script>
+        // Afficher les informations des images au survol
+        document.querySelectorAll('.image-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Animation des statistiques
+        function animateStats() {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.textContent);
+                let current = 0;
+                const increment = target / 50;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    stat.textContent = Math.floor(current);
+                }, 50);
+            });
+        }
+
+        // Déclencher l'animation au chargement
+        window.addEventListener('load', animateStats);
+    </script>
+</body>
+</html>

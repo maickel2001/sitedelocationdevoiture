@@ -1,0 +1,83 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="carBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="carRoof" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34d399;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="carHood" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6ee7b7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34d399;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="6" stdDeviation="4" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Arrière-plan avec route -->
+  <rect width="800" height="600" fill="#f8fafc"/>
+  
+  <!-- Route -->
+  <rect x="0" y="500" width="800" height="100" fill="#64748b"/>
+  <rect x="0" y="520" width="800" height="4" fill="#ffffff" opacity="0.8"/>
+  <rect x="0" y="540" width="800" height="4" fill="#ffffff" opacity="0.8"/>
+  <rect x="0" y="560" width="800" height="4" fill="#ffffff" opacity="0.8"/>
+  
+  <!-- Voiture Citadine -->
+  <g filter="url(#shadow)" transform="translate(200, 300)">
+    <!-- Corps principal -->
+    <rect x="0" y="0" width="400" height="120" rx="60" fill="url(#carBody)"/>
+    
+    <!-- Toit -->
+    <rect x="50" y="-80" width="300" height="80" rx="40" fill="url(#carRoof)"/>
+    
+    <!-- Capot -->
+    <rect x="150" y="-120" width="100" height="50" rx="25" fill="url(#carHood)"/>
+    
+    <!-- Roues -->
+    <circle cx="80" cy="120" r="40" fill="#1e293b" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="80" cy="120" r="30" fill="#475569"/>
+    <circle cx="80" cy="120" r="20" fill="#1e293b"/>
+    <circle cx="80" cy="120" r="10" fill="#e2e8f0"/>
+    
+    <circle cx="320" cy="120" r="40" fill="#1e293b" stroke="#0f172a" stroke-width="3"/>
+    <circle cx="320" cy="120" r="30" fill="#475569"/>
+    <circle cx="320" cy="120" r="20" fill="#1e293b"/>
+    <circle cx="320" cy="120" r="10" fill="#e2e8f0"/>
+    
+    <!-- Phares -->
+    <circle cx="60" y="-100" r="15" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+    <circle cx="340" y="-100" r="15" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+    
+    <!-- Vitres -->
+    <path d="M100 -80 L300 -80 L280 -120 L120 -120 Z" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    
+    <!-- Poignées de porte -->
+    <rect x="180" y="-40" width="8" height="20" rx="4" fill="#64748b"/>
+    <rect x="212" y="-40" width="8" height="20" rx="4" fill="#64748b"/>
+    
+    <!-- Rétroviseurs -->
+    <rect x="30" y="-60" width="15" height="25" rx="7" fill="url(#carRoof)"/>
+    <rect x="355" y="-60" width="15" height="25" rx="7" fill="url(#carRoof)"/>
+    
+    <!-- Antenne -->
+    <line x1="200" y1="-120" x2="200" y2="-140" stroke="#64748b" stroke-width="3"/>
+    <circle cx="200" cy="-142" r="3" fill="#64748b"/>
+  </g>
+  
+  <!-- Texte descriptif -->
+  <text x="400" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">
+    Citadine Économique - Toyota Yaris
+  </text>
+  
+  <!-- Badge "Économique" -->
+  <g transform="translate(650, 50)">
+    <rect x="0" y="0" width="120" height="40" rx="20" fill="#10b981" stroke="#059669" stroke-width="2"/>
+    <text x="60" y="26" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">
+      ÉCONOMIQUE
+    </text>
+  </g>
+</svg>

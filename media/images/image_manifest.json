@@ -1,0 +1,55 @@
+{
+  "last_updated": "2025-08-12 00:53:51",
+  "total_images": 30,
+  "categories": {
+    "locations": [
+      "agence-cotonou.jpg",
+      "agence-portonovo.jpg",
+      "agence-aeroport.jpg"
+    ],
+    "partners": [
+      "restaurant-logo.jpg",
+      "assurance-logo.jpg",
+      "hotel-logo.jpg",
+      "airline-logo.jpg"
+    ],
+    "gallery": [
+      "suv-moderne-1.jpg",
+      "berline-elegante-1.jpg",
+      "voiture-sportive-1.jpg",
+      "voiture-luxe-1.jpg",
+      "voiture-ville-1.jpg",
+      "4x4-terrain-1.jpg"
+    ],
+    "vehicles": [
+      "berline-premium.jpg",
+      "suv-familial.jpg",
+      "citadine-economique.jpg"
+    ],
+    "logo": [],
+    "hero": [
+      "hero-fallback.jpg",
+      "hero-poster.jpg"
+    ],
+    "services": [
+      "assurance-risques.jpg",
+      "reservation-en-ligne.jpg",
+      "support-24-7.jpg",
+      "livraison-domicile.jpg"
+    ],
+    "team": [
+      "directeur.jpg",
+      "technicien.jpg",
+      "manager.jpg"
+    ],
+    "testimonials": [
+      "client-2.jpg",
+      "client-1.jpg"
+    ],
+    "news": [
+      "route-benin.jpg",
+      "evenements-benin.jpg",
+      "maintenance-voiture.jpg"
+    ]
+  }
+}
