@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client'
+import bcrypt from 'bcryptjs'
 
 const prisma = new PrismaClient()
 
@@ -6,14 +7,17 @@ async function main() {
   console.log('🌱 Début du seeding...')
 
   // Créer des utilisateurs de test
+  const adminPassword = await bcrypt.hash('admin123', 12)
+  const userPassword = await bcrypt.hash('user123', 12)
+
   const adminUser = await prisma.user.upsert({
     where: { email: 'admin@carrentalbenin.com' },
     update: {},
     create: {
       email: 'admin@carrentalbenin.com',
       name: 'Administrateur',
+      password: adminPassword,
       role: 'ADMIN',
-      emailVerified: new Date(),
     },
   })
 
@@ -23,8 +27,8 @@ async function main() {
     create: {
       email: 'user@test.com',
       name: 'Utilisateur Test',
+      password: userPassword,
       role: 'USER',
-      emailVerified: new Date(),
     },
   })
 
@@ -40,7 +44,7 @@ async function main() {
         title: 'Toyota Corolla 2023',
         description: 'Berline confortable et économique, parfaite pour les déplacements urbains et interurbains. Équipée de la climatisation, GPS et Bluetooth.',
         pricePerDay: 25000,
-        images: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800,https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800',
+        image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800',
         isAvailable: true,
       },
     }),
@@ -52,7 +56,7 @@ async function main() {
         title: 'Toyota Land Cruiser 4x4',
         description: '4x4 robuste et luxueux, idéal pour les voyages en famille et les terrains difficiles. Équipé de 7 places et de toutes les options de confort.',
         pricePerDay: 45000,
-        images: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800,https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800',
+        image: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800',
         isAvailable: true,
       },
     }),
@@ -64,7 +68,7 @@ async function main() {
         title: 'Honda Civic 2022',
         description: 'Berline sportive et moderne avec un design élégant. Parfaite pour les conducteurs qui recherchent style et performance.',
         pricePerDay: 30000,
-        images: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800,https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800',
+        image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800',
         isAvailable: true,
       },
     }),
@@ -76,7 +80,7 @@ async function main() {
         title: 'Nissan X-Trail SUV',
         description: 'SUV familial spacieux et confortable. Idéal pour les voyages en groupe avec beaucoup de bagages.',
         pricePerDay: 35000,
-        images: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800,https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800',
+        image: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800',
         isAvailable: true,
       },
     }),
@@ -88,7 +92,7 @@ async function main() {
         title: 'Mercedes Classe C',
         description: 'Berline de luxe offrant le meilleur en termes de confort et de technologie. Parfaite pour les occasions spéciales.',
         pricePerDay: 60000,
-        images: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800,https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800',
+        image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800',
         isAvailable: true,
       },
     }),
@@ -110,23 +114,9 @@ async function main() {
 
   console.log('✅ Réservation de test créée')
 
-  // Créer une preuve de paiement de test
-  const testPaymentProof = await prisma.paymentProof.create({
-    data: {
-      bookingId: testBooking.id,
-      operator: 'MTN_MOMO',
-      amount: 75000,
-      transactionNumber: 'TX123456789',
-      proofUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800',
-      status: 'PENDING',
-    },
-  })
-
-  console.log('✅ Preuve de paiement de test créée')
-
   console.log('🎉 Seeding terminé avec succès!')
-  console.log('👤 Admin:', adminUser.email)
-  console.log('👤 Utilisateur:', testUser.email)
+  console.log('👤 Admin:', adminUser.email, 'Mot de passe: admin123')
+  console.log('👤 Utilisateur:', testUser.email, 'Mot de passe: user123')
   console.log('🚗 Voitures créées:', cars.length)
 }
 
