@@ -1,0 +1,51 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Fichiers temporaires
+*.tmp
+*.temp
+*.log
+
+# Fichiers d'éditeur
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Fichiers de build
+dist/
+build/
+node_modules/
+
+# Fichiers de cache
+.cache/
+.temp/
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
+*.old
+
+# Fichiers de configuration locale
+.env
+.env.local
+.env.production
+
+# Fichiers de logs
+logs/
+*.log
+
+# Fichiers de base de données
+*.db
+*.sqlite
+
+# Fichiers de sauvegarde Hostinger
+backup/
+backups/
+
+# Fichiers de cache Hostinger
+.cache/
+.temp/

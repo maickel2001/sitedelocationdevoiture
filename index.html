@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoLoc Bénin - Location de Voitures Premium</title>
+    <meta name="description" content="Location de voitures au Bénin. Large gamme de véhicules, prix compétitifs, service premium. Réservez votre voiture en ligne !">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40">
+                        <circle cx="20" cy="20" r="18" fill="#2563eb" stroke="#1e40af" stroke-width="2"/>
+                        <path d="M12 25 L28 25 L26 20 L14 20 Z" fill="white"/>
+                        <circle cx="16" cy="28" r="3" fill="#1e40af"/>
+                        <circle cx="24" cy="28" r="3" fill="#1e40af"/>
+                        <path d="M18 22 L22 22 L22 18 L18 18 Z" fill="#2563eb"/>
+                    </svg>
+                    <span>AutoLoc Bénin</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#vehicules">Véhicules</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#tarifs">Tarifs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Location de Voitures au Bénin</h1>
+            <p>Découvrez notre flotte de véhicules modernes et confortables pour tous vos déplacements</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('vehicules')">Voir nos véhicules</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('contact')">Nous contacter</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="car-animation">
+                <svg width="300" height="200" viewBox="0 0 300 200">
+                    <rect x="50" y="120" width="200" height="40" rx="20" fill="#2563eb"/>
+                    <rect x="60" y="100" width="180" height="30" rx="15" fill="#3b82f6"/>
+                    <rect x="80" y="80" width="140" height="25" rx="12" fill="#60a5fa"/>
+                    <circle cx="80" cy="160" r="15" fill="#1e40af"/>
+                    <circle cx="220" cy="160" r="15" fill="#1e40af"/>
+                    <path d="M70 90 L230 90 L220 70 L80 70 Z" fill="#dbeafe"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Véhicules Section -->
+    <section id="vehicules" class="vehicles">
+        <div class="container">
+            <h2>Nos Véhicules</h2>
+            <p class="section-subtitle">Une gamme complète pour tous vos besoins</p>
+            
+            <div class="vehicle-grid">
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <svg width="200" height="150" viewBox="0 0 200 150">
+                            <rect x="30" y="80" width="140" height="30" rx="15" fill="#10b981"/>
+                            <rect x="40" y="60" width="120" height="25" rx="12" fill="#34d399"/>
+                            <rect x="60" y="40" width="80" height="25" rx="12" fill="#6ee7b7"/>
+                            <circle cx="60" cy="110" r="12" fill="#059669"/>
+                            <circle cx="140" cy="110" r="12" fill="#059669"/>
+                            <path d="M50 50 L150 50 L140 30 L60 30 Z" fill="#d1fae5"/>
+                        </svg>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>Citadine Économique</h3>
+                        <p>Idéale pour la ville et les petits trajets</p>
+                        <ul>
+                            <li>5 places assises</li>
+                            <li>Climatisation</li>
+                            <li>GPS intégré</li>
+                            <li>Carburant économique</li>
+                        </ul>
+                        <div class="vehicle-price">
+                            <span class="price">15,000 FCFA</span>
+                            <span class="period">/jour</span>
+                        </div>
+                        <button class="btn btn-primary">Réserver</button>
+                    </div>
+                </div>
+
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <svg width="200" height="150" viewBox="0 0 200 150">
+                            <rect x="25" y="85" width="150" height="35" rx="17" fill="#f59e0b"/>
+                            <rect x="35" y="65" width="130" height="25" rx="12" fill="#fbbf24"/>
+                            <rect x="55" y="45" width="90" height="25" rx="12" fill="#fcd34d"/>
+                            <circle cx="60" cy="120" r="13" fill="#d97706"/>
+                            <circle cx="140" cy="120" r="13" fill="#d97706"/>
+                            <path d="M45 55 L155 55 L145 35 L55 35 Z" fill="#fef3c7"/>
+                        </svg>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>SUV Familial</h3>
+                        <p>Confort et espace pour toute la famille</p>
+                        <ul>
+                            <li>7 places assises</li>
+                            <li>Climatisation bi-zone</li>
+                            <li>GPS + Bluetooth</li>
+                            <li>Grand coffre</li>
+                        </ul>
+                        <div class="vehicle-price">
+                            <span class="price">25,000 FCFA</span>
+                            <span class="period">/jour</span>
+                        </div>
+                        <button class="btn btn-primary">Réserver</button>
+                    </div>
+                </div>
+
+                <div class="vehicle-card">
+                    <div class="vehicle-image">
+                        <svg width="200" height="150" viewBox="0 0 200 150">
+                            <rect x="20" y="90" width="160" height="40" rx="20" fill="#dc2626"/>
+                            <rect x="30" y="70" width="140" height="25" rx="12" fill="#ef4444"/>
+                            <rect x="50" y="50" width="100" height="25" rx="12" fill="#f87171"/>
+                            <circle cx="65" cy="130" r="15" fill="#b91c1c"/>
+                            <circle cx="135" cy="130" r="15" fill="#b91c1c"/>
+                            <path d="M40 60 L160 60 L150 40 L50 40 Z" fill="#fee2e2"/>
+                        </svg>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>Berline Premium</h3>
+                        <p>Élégance et performance pour vos déplacements</p>
+                        <ul>
+                            <li>5 places luxueuses</li>
+                            <li>Climatisation tri-zone</li>
+                            <li>GPS + Apple CarPlay</li>
+                            <li>Sièges cuir</li>
+                        </ul>
+                        <div class="vehicle-price">
+                            <span class="price">35,000 FCFA</span>
+                            <span class="period">/jour</span>
+                        </div>
+                        <button class="btn btn-primary">Réserver</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <p class="section-subtitle">Une expérience de location complète et professionnelle</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="25" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+                            <path d="M20 25 L40 25 L35 35 L25 35 Z" fill="#2563eb"/>
+                            <circle cx="25" cy="40" r="5" fill="#1e40af"/>
+                            <circle cx="35" cy="40" r="5" fill="#1e40af"/>
+                        </svg>
+                    </div>
+                    <h3>Livraison à domicile</h3>
+                    <p>Nous livrons votre véhicule à l'adresse de votre choix dans Cotonou et environs</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="25" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+                            <path d="M15 20 L45 20 L40 30 L20 30 Z" fill="#f59e0b"/>
+                            <rect x="20" y="35" width="20" height="8" rx="4" fill="#d97706"/>
+                            <rect x="25" y="40" width="10" height="3" rx="1" fill="#92400e"/>
+                        </svg>
+                    </div>
+                    <h3>Assurance tous risques</h3>
+                    <p>Voyagez en toute sérénité avec notre assurance complète incluse</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="25" fill="#dcfce7" stroke="#10b981" stroke-width="2"/>
+                            <path d="M20 25 L40 25 L30 40 Z" fill="#10b981"/>
+                            <circle cx="30" cy="20" r="3" fill="#059669"/>
+                            <rect x="25" y="35" width="10" height="8" rx="2" fill="#047857"/>
+                        </svg>
+                    </div>
+                    <h3>Support 24/7</h3>
+                    <p>Notre équipe est disponible 24h/24 et 7j/7 pour vous assister</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60">
+                            <circle cx="30" cy="30" r="25" fill="#f3e8ff" stroke="#8b5cf6" stroke-width="2"/>
+                            <rect x="20" y="25" width="20" height="15" rx="2" fill="#8b5cf6"/>
+                            <rect x="25" y="30" width="10" height="5" rx="1" fill="#7c3aed"/>
+                            <circle cx="30" cy="40" r="2" fill="#6d28d9"/>
+                        </svg>
+                    </div>
+                    <h3>Réservation en ligne</h3>
+                    <p>Réservez votre véhicule en quelques clics sur notre plateforme sécurisée</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tarifs Section -->
+    <section id="tarifs" class="pricing">
+        <div class="container">
+            <h2>Nos Tarifs</h2>
+            <p class="section-subtitle">Des prix transparents et compétitifs</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Journée</h3>
+                        <div class="price">
+                            <span class="amount">À partir de</span>
+                            <span class="currency">15,000 FCFA</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Kilométrage illimité</li>
+                        <li>✓ Assurance incluse</li>
+                        <li>✓ Assistance routière</li>
+                        <li>✓ Carburant plein</li>
+                    </ul>
+                    <button class="btn btn-outline">Choisir</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-header">
+                        <h3>Semaine</h3>
+                        <div class="price">
+                            <span class="amount">À partir de</span>
+                            <span class="currency">90,000 FCFA</span>
+                        </div>
+                        <div class="discount">Économisez 15%</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Kilométrage illimité</li>
+                        <li>✓ Assurance incluse</li>
+                        <li>✓ Assistance routière</li>
+                        <li>✓ Carburant plein</li>
+                        <li>✓ Entretien inclus</li>
+                    </ul>
+                    <button class="btn btn-primary">Choisir</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Mois</h3>
+                        <div class="price">
+                            <span class="amount">À partir de</span>
+                            <span class="currency">300,000 FCFA</span>
+                        </div>
+                        <div class="discount">Économisez 25%</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Kilométrage illimité</li>
+                        <li>✓ Assurance incluse</li>
+                        <li>✓ Assistance routière</li>
+                        <li>✓ Carburant plein</li>
+                        <li>✓ Entretien inclus</li>
+                        <li>✓ Véhicule de remplacement</li>
+                    </ul>
+                    <button class="btn btn-outline">Choisir</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <p class="section-subtitle">Notre équipe est là pour vous aider</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <circle cx="20" cy="20" r="18" fill="#dbeafe"/>
+                                <path d="M20 10 L30 20 L20 30 L10 20 Z" fill="#2563eb"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Adresse</h4>
+                            <p>123 Avenue de la Paix<br>Cotonou, Bénin</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <circle cx="20" cy="20" r="18" fill="#dcfce7"/>
+                                <path d="M15 15 L25 15 L25 25 L15 25 Z" fill="#10b981"/>
+                                <circle cx="20" cy="20" r="2" fill="#059669"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p>+229 21 30 12 34<br>+229 97 12 34 56</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <circle cx="20" cy="20" r="18" fill="#fef3c7"/>
+                                <path d="M12 15 L28 15 L28 25 L12 25 Z" fill="#f59e0b"/>
+                                <path d="M12 15 L20 22 L28 15" fill="none" stroke="#d97706" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@autoloc-benin.bj<br>reservation@autoloc-benin.bj</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Votre téléphone" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="subject" name="subject" required>
+                            <option value="">Sujet de votre message</option>
+                            <option value="reservation">Réservation</option>
+                            <option value="information">Demande d'information</option>
+                            <option value="devis">Demande de devis</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg width="30" height="30" viewBox="0 0 30 30">
+                            <circle cx="15" cy="15" r="13" fill="#2563eb"/>
+                            <path d="M9 19 L21 19 L19 15 L11 15 Z" fill="white"/>
+                            <circle cx="12" cy="21" r="2" fill="#1e40af"/>
+                            <circle cx="18" cy="21" r="2" fill="#1e40af"/>
+                        </svg>
+                        <span>AutoLoc Bénin</span>
+                    </div>
+                    <p>Votre partenaire de confiance pour la location de véhicules au Bénin. Qualité, sécurité et service premium.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#vehicules">Véhicules</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#tarifs">Tarifs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Location courte durée</li>
+                        <li>Location longue durée</li>
+                        <li>Location avec chauffeur</li>
+                        <li>Transport d'entreprise</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M10 0 C4.48 0 0 4.48 0 10 C0 15.52 4.48 20 10 20 C15.52 20 20 15.52 20 10 C20 4.48 15.52 0 10 0 Z M7 15 L3 10 L4.41 8.59 L7 11.17 L15.59 2.58 L17 4 L7 15 Z" fill="#2563eb"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M10 0 C4.48 0 0 4.48 0 10 C0 15.52 4.48 20 10 20 C15.52 20 20 15.52 20 10 C20 4.48 15.52 0 10 0 Z M7 15 L3 10 L4.41 8.59 L7 11.17 L15.59 2.58 L17 4 L7 15 Z" fill="#10b981"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 20 20">
+                                <path d="M10 0 C4.48 0 0 4.48 0 10 C0 15.52 4.48 20 10 20 C15.52 20 20 15.52 20 10 C20 4.48 15.52 0 10 0 Z M7 15 L3 10 L4.41 8.58 L7 11.17 L15.59 2.58 L17 4 L7 15 Z" fill="#f59e0b"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 AutoLoc Bénin. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
